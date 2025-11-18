@@ -18,6 +18,8 @@ To do:
    Building, Condo and the
  Default and Admin roles available. (3%)done
 
-5. Change the Registration page to add an Building, Condo and Default role to user (3%)
+5. Change the Registration page to add an Building, Condo and Default role to user (3%) maybe done
+
+
 6. Create a repo method to get all the Users for a Building (3%)
 7. Create a repo method to get all the Condos for a Building (3%)
