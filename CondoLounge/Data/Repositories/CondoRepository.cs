@@ -8,5 +8,6 @@ namespace CondoLounge.Data.Repositories
         public CondoRepository(ApplicationDbContext db, ILogger<CondoRepository> logger) : base(db, logger)
         {
         }
+
     }
 }

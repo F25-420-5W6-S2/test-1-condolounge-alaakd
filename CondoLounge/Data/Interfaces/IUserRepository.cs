@@ -4,6 +4,8 @@ namespace CondoLounge.Data.Interfaces
 {
     public class IUserRepository : ICondoLoungeGenericRepository<ApplicationUser>
     {
+        //Task<IEnumerable<ApplicationUser>> GetUsersForBuildingAsync(int BuildingId);
+
         void ICondoLoungeGenericRepository<ApplicationUser>.Add(ApplicationUser entity)
         {
             throw new NotImplementedException();
