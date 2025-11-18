@@ -6,5 +6,9 @@
         
         public int BuildingId { get; set; }
         public string Name { get; set; }
+
+        public ICollection<ApplicationUser> Users { get; set; }
+        public ICollection<Condo> Condos { get; set; }
+
     }
 }

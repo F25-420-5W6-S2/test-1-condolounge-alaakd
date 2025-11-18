@@ -23,7 +23,7 @@ namespace CondoLounge.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Building>()
-            .HasIndex(o => o.BuildingId)
+            .HasIndex(b => b.BuildingId)
             .IsUnique();
 
             modelBuilder.Entity<Condo>()

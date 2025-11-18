@@ -33,6 +33,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//tells the app to check who the user is.
+app.UseAuthentication();
+//tells the app to check what the user is allowed to do
 app.UseAuthorization();
 
 app.MapControllerRoute(

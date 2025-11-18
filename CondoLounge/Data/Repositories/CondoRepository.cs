@@ -3,7 +3,7 @@ using CondoLounge.Data.Interfaces;
 
 namespace CondoLounge.Data.Repositories
 {
-    public class CondoRepository: CondoLoungeGenericGenericRepository<Condo>, ICondoRepository
+    public class CondoRepository: CondoLoungeGenericGenericRepository<Condo>
     {
         public CondoRepository(ApplicationDbContext db, ILogger<CondoRepository> logger) : base(db, logger)
         {
