@@ -1,7 +1,10 @@
-
-
-
 using CondoLounge.Data;
+using CondoLounge.Data.Entities;
+using CondoLounge.Data.Repositories.Helpers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+//using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

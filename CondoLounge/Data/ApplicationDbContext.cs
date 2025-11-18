@@ -11,10 +11,24 @@ namespace CondoLounge.Data
             : base(options)
         {
         }
-        
+
+        // Create a table in the database
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<Condo> Condos { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Calls the IdentityDbContext configuration so all Identity tables
+            // are created correctly before applying our own custom rules.
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Building>()
+            .HasIndex(o => o.BuildingId)
+            .IsUnique();
+
+            modelBuilder.Entity<Condo>()
+            .HasIndex(o => o.CondoId)
+            .IsUnique();
         }
     }
 }
