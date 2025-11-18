@@ -4,7 +4,10 @@ using CondoLounge.Data.Repositories;
 namespace CondoLounge.Data
 {
     public interface IUnitOfWork : IDisposable
-    {        
+    {
+        IUserRepository Users { get; }
+        ICondoRepository Condos { get; }
+
         T GetRepository<T>() where T : class;
         //DutchProductRepository ProductRepository { get; }
         //DutchOrderRepository OrderRepository { get; }

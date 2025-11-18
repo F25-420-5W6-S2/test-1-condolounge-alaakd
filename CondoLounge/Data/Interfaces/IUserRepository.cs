@@ -4,7 +4,7 @@ namespace CondoLounge.Data.Interfaces
 {
     public class IUserRepository : ICondoLoungeGenericRepository<ApplicationUser>
     {
-        //Task<IEnumerable<ApplicationUser>> GetUsersForBuildingAsync(int BuildingId);
+        Task<IEnumerable<ApplicationUser>> GetUsersForBuildingAsync(int BuildingId);
 
         void ICondoLoungeGenericRepository<ApplicationUser>.Add(ApplicationUser entity)
         {
@@ -32,6 +32,11 @@ namespace CondoLounge.Data.Interfaces
         }
 
         void ICondoLoungeGenericRepository<ApplicationUser>.Update(ApplicationUser entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object GetAll()
         {
             throw new NotImplementedException();
         }

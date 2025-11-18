@@ -1,10 +1,14 @@
 ﻿
+using CondoLounge.Data.Interfaces;
+using CondoLounge.Data.Repositories;
 using CondoLounge.Data.Repositories.Helpers;
 
 namespace CondoLounge.Data
 {
     public class UnitOfWork: IUnitOfWork
     {
+        public IUserRepository Users { get; }
+        public ICondoRepository Condos { get; }
         private ApplicationDbContext _context;
         private readonly IRepositoryProvider _repositoryProvider;
         //private ILogger<DutchProductRepository> _loggerProduct;
@@ -16,6 +20,9 @@ namespace CondoLounge.Data
             //_loggerProduct = new Logger<DutchProductRepository>(loggerFactory);
             _context = context;
             _repositoryProvider = provider;
+            Users = new UserRepository(context);
+            Condos = new CondoRepository(context);
+
         }
 
         public T GetRepository<T>() where T : class

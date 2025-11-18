@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CondoLounge.Data.Repositories
 {
     public class UserRepository: CondoLoungeGenericGenericRepository<ApplicationUser>
-        //, IUserRepository
+        , IUserRepository
     {
         private readonly ApplicationDbContext _context;
 
